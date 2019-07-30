@@ -4030,3 +4030,17 @@ Processing by AuthorsController#index as HTML
   Rendering authors/index.html.erb within layouts/application
   [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
   Rendered authors/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 673ms (Views: 665.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/7" for 184.170.166.212 at 2019-07-30 18:23:37 +0000
+Cannot render console from 184.170.166.212! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 7]]
+  Rendered authors/show.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 1.4ms)
+
+
