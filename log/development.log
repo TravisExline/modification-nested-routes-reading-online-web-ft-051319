@@ -4295,3 +4295,16 @@ rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
   Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.8ms)
+Started POST "/posts" for 184.170.166.212 at 2019-07-30 18:37:37 +0000
+Cannot render console from 184.170.166.212! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uu8VBBNGeJ0yL2h9je2wt9Rwzc01comY69ay++NDDRt36QQGlHWBZxz2CC3QcVOqKsBuX08Dx8V7Of7RjyJBVw==", "post"=>{"author_id"=>"7", "title"=>"New post #1", "description"=>"post post post"}, "commit"=>"Create Post"}
+Unpermitted parameter: author_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New Post #1"], ["description", "post post post"], ["created_at", "2019-07-30 18:37:37.440654"], ["updated_at", "2019-07-30 18:37:37.440654"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.203.187.180:42247/posts/20
+Completed 302 Found in 38ms (ActiveRecord: 3.2ms)
+
+
