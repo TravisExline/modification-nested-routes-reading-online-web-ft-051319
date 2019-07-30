@@ -2,11 +2,6 @@
   <%= author_id_field(@post) %>
   <br>
   <label>Post title:</label><br>
-  <% if @post.author.nil? %>
-    <%= f.collection_select :author_id, Author.all, :id, :name %></br>
-  <% end %>
-
-  <%= f.hidden_field :author_id %>
 
   <%= f.text_field :title %><br>
 
