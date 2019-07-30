@@ -1,7 +1,9 @@
 <%= form_for(@post) do |f| %>
+  <%= author_id_field(@post) %>
+  <br>
   <label>Post title:</label><br>
   <% if @post.author.nil? %>
-    <%= f.select :author_id, collection_select(Author.all, :id, :name) %></br>
+    <%= f.collection_select :author_id, Author.all, :id, :name %></br>
   <% end %>
 
   <%= f.hidden_field :author_id %>
